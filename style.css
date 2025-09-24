@@ -1,0 +1,220 @@
+/* Reset أساسي */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #faf8f6; /* لون خلفية ناعم */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* الهيرو (الصورة الرئيسية) */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #d4af37; /* دهبي */
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  color: #fff8e1;
+}
+
+/* العناوين */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 40px 0 20px;
+  color: #a67c52;
+}
+
+/* شبكة المنتجات */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin: 15px 0 5px;
+}
+
+.product-card p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* السعر */
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #d4af37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.price .currency {
+  background: #d4af37;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+/* الأزرار */
+.product-card button {
+  background: #a67c52;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 8px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.product-card button:hover {
+  background: #d4af37;
+  transform: scale(1.05);
+}
+
+/* الفوتر */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+footer h2 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+footer a {
+  color: #d4af37;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff8e1;
+  text-decoration: underline;
+}
+/* تنسيق الهيدر */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* اللوجو */
+header .logo img {
+  height: 60px;
+}
+
+/* المنيو */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #b48a78; /* لون أنيق */
+}
+
+/* الشنطة والمفضلة */
+header .cart {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+}
+
+header .cart i {
+  font-size: 22px;
+  color: #b48a78; /* لون أيقونة أنثوي شيك */
+}
+
+header .cart span {
+  background: #b48a78;
+  color: white;
+  font-size: 14px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-left: 5px;
+}
